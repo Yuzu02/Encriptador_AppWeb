@@ -1,0 +1,364 @@
+$violet: rgba(86, 32, 160, 1);
+$background: rgb(236, 214, 255);
+$text: rgb(50, 0, 70);
+$poppins: "Poppins", sans-serif;
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $background;
+  justify-content: space-between;
+
+  main {
+    width: 100%;
+    height: 100%;
+
+    .stains {
+      display: none;
+    }
+    .message-container {
+      padding: 6.25rem 1.875rem 0.625rem 1.9rem;
+
+      .message {
+        width: 100%;
+        color: $text;
+        border: none;
+        resize: none;
+        height: 20rem;
+        outline: none;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 50px;
+        font-family: $poppins;
+        background-color: $background;
+
+        &::placeholder {
+          color: $text;
+        }
+      }
+      .recommendation-container {
+        color: $text;
+        display: flex;
+        margin-bottom: 10px;
+        font-family: $poppins;
+
+        img {
+          width: 1rem;
+          margin-right: 3px;
+        }
+      }
+      .buttons-container {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          border: none;
+          padding: 20px 0px;
+          font-size: 1.3rem;
+          margin-bottom: 10px;
+          border-radius: 15px;
+          font-family: $poppins;
+        }
+
+        .button-1 {
+          color: white;
+          background-color: $violet;
+        }
+
+        .button-2 {
+          color: $violet;
+          border: 1px solid $violet;
+          background-color: white;
+        }
+      }
+    }
+
+    .message-encrypted-container {
+      padding: 2rem;
+      margin-bottom: 3rem;
+
+      .message-encrypted {
+        width: 100%;
+        padding: 40px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 9px 9px 12px #999999;
+
+        .no-encrypted {
+          display: none;
+          font-family: $poppins;
+
+          img {
+            display: none;
+          }
+
+          h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            text-align: center;
+          }
+
+          p {
+            font-size: 1.2rem;
+            text-align: center;
+          }
+        }
+
+        .no-encrypted-active {
+          display: inline;
+        }
+
+        .encrypted {
+          display: none;
+          font-family: $poppins;
+
+          div {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+          }
+
+          img {
+            display: none;
+          }
+
+          button {
+            width: 100%;
+            padding: 20px;
+            color: $violet;
+            font-size: 1.3rem;
+            border-radius: 20px;
+            border: 1px solid $violet;
+            background-color: white;
+          }
+        }
+
+        .encrypted-active {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    padding: 20px 30px;
+    background-size: cover;
+    background-image: url("../assets/footer.jpg");
+
+    img {
+      width: 1.3rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    main {
+      .stains {
+        height: 40%;
+        display: inline;
+        position: absolute;
+      }
+      .message-container {
+        padding: 12.5rem 4.4rem 0.625rem 4.4rem;
+
+        .message {
+          font-size: 2.3rem;
+        }
+        .recommendation-container {
+          img {
+            width: 1.3rem;
+            margin-right: 6px;
+          }
+          p {
+            font-size: 1.3rem;
+          }
+        }
+        .buttons-container {
+          flex-direction: row;
+          justify-content: center;
+          gap: 15px;
+
+          button {
+            width: 100%;
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .message-encrypted-container {
+        padding: 2rem 4.4rem;
+        .message-encrypted {
+          .no-encrypted {
+            h2 {
+              font-size: 1.7rem;
+              margin-bottom: 10px;
+            }
+
+            p {
+              font-size: 1.4rem;
+            }
+          }
+
+          .encrypted {
+            div {
+              font-size: 1.5rem;
+            }
+
+            button {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      width: 100%;
+      padding: 20px 30px;
+      background-size: cover;
+      background-image: url("../assets/footer.jpg");
+
+      img {
+        width: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 89px);
+
+      .stains {
+        top: 0;
+        left: 0;
+        height: 25rem;
+        display: inline;
+        position: absolute;
+      }
+      .message-container {
+        width: 50%;
+        padding: 5rem 2rem 2rem 6rem;
+
+        .message {
+          font-size: 1.7rem;
+          margin-bottom: 60px;
+        }
+        .recommendation-container {
+          margin-bottom: 20px;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+
+        .buttons-container {
+          flex-direction: row;
+
+          button {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            border-radius: 20px;
+          }
+
+          .button-1 {
+            &:hover {
+              cursor: pointer;
+              background-color: rgb(106, 38, 202);
+            }
+          }
+
+          .button-2 {
+            &:hover {
+              cursor: pointer;
+              background-color: rgb(249, 244, 255);
+            }
+          }
+        }
+      }
+
+      .message-encrypted-container {
+        margin-top: 2rem;
+        .message-encrypted {
+          width: 26rem;
+          height: 80vh;
+          overflow: auto;
+          position: relative;
+          border-radius: 30px;
+
+          .no-encrypted {
+            img {
+              top: 0;
+              right: 0;
+              width: 90%;
+              display: inline;
+              position: absolute;
+            }
+
+            h2 {
+              top: 60%;
+              left: 40px;
+              right: 40px;
+              position: absolute;
+            }
+
+            p {
+              top: 73%;
+              left: 40px;
+              right: 40px;
+              position: absolute;
+            }
+          }
+
+          .encrypted {
+            div {
+              font-size: 1.5rem;
+              margin-bottom: 20px;
+            }
+
+            img {
+              width: 90%;
+              display: inline;
+              margin-bottom: 20px;
+            }
+
+            button {
+              font-size: 1.5rem;
+              margin-bottom: 2rem;
+              &:hover {
+                cursor: pointer;
+                background-color: rgb(249, 244, 255);
+              }
+            }
+          }
+          .encrypted-active {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}
