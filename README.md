@@ -19,7 +19,7 @@
 </ol>
 
 <h2>Disponible en Github Pages</h2>
-<p>Este proyecto está disponible en <a href="https://yuzu02.github.io/Encriptador_AppWeb/"</a> para su demo y prueba.</p>
+<p>Este proyecto está disponible en <a href="https://yuzu02.github.io/Encriptador_AppWeb/">Github Pages</a> para su demo y prueba.</p>
 
 <h2>Consideraciones</h2>
 <ul>
